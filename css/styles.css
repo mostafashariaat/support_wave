@@ -3,6 +3,10 @@
 /* global styles */
 
 /* index page styles */
+.table_opacity {
+    -webkit-mask-image: -webkit-gradient(linear, left top,
+            left bottom, from(rgba(0, 0, 0, 1)), to(rgba(0, 0, 0, 0.034)));
+}
 
 /* supporters page styles */
 
@@ -10,4 +14,4 @@
 
 /* videos page styles */
 
-/* vote pages styles */ 
+/* vote pages styles */
