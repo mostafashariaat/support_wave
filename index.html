@@ -7,38 +7,148 @@
     <link rel="stylesheet" href="css/styles.css" />
     <link href="./dist/output.css" rel="stylesheet" />
   </head>
-  <body>
-    <header class="bg-gray-800 text-white py-4">
-      <div class="container mx-auto flex justify-between items-center">
-        <h1 class="text-2xl font-bold">حمایت از دکتر جلیلی</h1>
-        <button class="bg-blue-500 text-white px-4 py-2 rounded">
-          من هم رای میدهم
-        </button>
-      </div>
+  <body class="overflow-x-hidden">
+    <header
+      class="bg-primery w-full text-white h-[70px] flex justify-between items-center px-6 drop-shadow-md bg-[url('/public/images/pattern-0.5.png')] bg-blend-multiply bg-cover"
+    >
+      <ul class="flex items-center justify-center gap-4 h-full">
+        <li
+          class="p-4 font-bold text-2xl hover:bg-white/20 border-b-4 border-transparent cursor-pointer hover:border-white flex justify-center items-center h-full"
+        >
+          ویدیو
+        </li>
+        <li
+          class="p-4 font-bold text-2xl hover:bg-white/20 border-b-4 border-transparent cursor-pointer hover:border-white flex justify-center items-center h-full"
+        >
+          حمایت کنندگان
+        </li>
+      </ul>
+      <img
+        src="public/images/jalili_name.png"
+        class="w-[100px] object-cover"
+        alt="test"
+      />
     </header>
-
-    <main class="container mx-auto mt-4">
-      <div class="flex flex-col md:flex-row">
-        <div class="w-full md:w-1/2 mb-4">
-          <img src="image.jpg" alt="تصویر دکتر جلیلی" class="rounded" />
+    <main class="w-full flex flex-col gap-20 mt-10">
+      <div class="flex flex-col w-full gap-4 justify-start items-start">
+        <div class="flex w-full gap-12 justify-start items-start">
+          <img
+            src="public/images/jalili_landing.jpg"
+            class="aspect-square w-[450px] rounded-l-3xl object-cover"
+            alt="test"
+          />
+          <div class="flex w-full justify-center items-center flex-col gap-4">
+            <h1 class="text-[130px] font-black">300,784 نفر</h1>
+            <div
+              class="bg-primery flex gap-8 items-center justify-center py-3 px-12 rounded-xl mt-4"
+            >
+              <div class="aspect-square w-[50px] relative">
+                <div
+                  class="absolute top-0 left-0 bg-secondry rounded-xl aspect-square w-[40px]"
+                ></div>
+                <div
+                  class="absolute bottom-0 right-0 bg-white rounded-xl aspect-square w-[40px]"
+                ></div>
+              </div>
+              <h2 class="text-white font-bold text-6xl text-center">
+                حامیان دکتر جلیلی
+              </h2>
+            </div>
+            <div
+              class="bg-white border-4 border-secondry flex gap-8 items-center justify-center py-[1px] px-12 rounded-xl mt-4"
+            >
+              <img
+                src="public/images/fingerprint_green.png"
+                class="w-[60px]"
+                alt="fingerprint"
+              />
+              <h2 class="text-secondry font-bold text-[40px] text-center">
+                من هم به جلیلی رای میدهم
+              </h2>
+            </div>
+          </div>
         </div>
-        <div class="w-full md:w-1/2">
-          <h2 class="text-2xl font-bold">هر ایرانی یک نقش عجیب</h2>
-          <p>
-            در این شهر عجیب که صندلی ها را از ما میگیرند تنها با مدد دکتر جلیلی
-            میتوانیم به صندلیهای فیری دست پیدا کنیم
-          </p>
-          <button class="bg-blue-500 text-white px-4 py-2 rounded">
-            بارگذاری ویدیو
+        <div class="w-full flex gap-8 justify-center items-center">
+          <div
+            class="bg-secondry rounded-xl flex items-center justify-center gap-4 px-4 py-3.5"
+          >
+            <div class="flex items-center gap-2">
+              <label for="name" class="text-white text-lg"
+                >نام و نام خانوادگی</label
+              >
+              <input
+                type="text"
+                name="name"
+                id="name"
+                class="rounded-lg outline-none px-2 h-8"
+              />
+            </div>
+            <div class="flex items-center gap-2">
+              <label for="state" class="text-white text-lg"
+                >نام و نام خانوادگی</label
+              >
+              <select
+                name="state"
+                id="state"
+                class="w-32 h-8 rounded-lg bg-white cursor-pointer"
+              ></select>
+            </div>
+            <div class="flex items-center gap-2">
+              <label for="experience" class="text-white text-lg"
+                >نام و نام خانوادگی</label
+              >
+              <select
+                name="experience"
+                id="experience"
+                class="w-32 h-8 rounded-lg bg-white cursor-pointer"
+              ></select>
+            </div>
+          </div>
+          <button
+            class="whitespace-nowrap px-6 py-3 border-4 border-secondry rounded-lg text-secondry font-bold hover:bg-secondry/20 text-xl"
+          >
+            حمایت میکنم
           </button>
         </div>
       </div>
-    </main>
-
-    <footer class="bg-gray-800 text-white py-4">
-      <div class="container mx-auto text-center">
-        <p>&copy; تحت لیسانس کدینتو به مولا</p>
+      <div class="w-full flex flex-col justify-center items-center gap-12">
+        <div class="flex gap-4 items-center justify-center">
+          <div class="aspect-square w-[50px] relative">
+            <div
+              class="absolute top-0 left-0 bg-secondry rounded-xl aspect-square w-[40px]"
+            ></div>
+            <div
+              class="absolute bottom-0 right-0 bg-primery rounded-xl aspect-square w-[40px]"
+            ></div>
+          </div>
+          <h1 class="text-5xl font-bold text-center">
+            جدیدترین حامیان دکتر جلیلی
+          </h1>
+          <div class="aspect-square w-[50px] relative">
+            <div
+              class="absolute top-0 left-0 bg-secondry rounded-xl aspect-square w-[40px]"
+            ></div>
+            <div
+              class="absolute bottom-0 right-0 bg-primery rounded-xl aspect-square w-[40px]"
+            ></div>
+          </div>
+        </div>
+        <div class="flex flex-col gap-1 items-center justify-center w-full">
+            <div class="grid grid-cols-[2fr_4fr_2fr_2.5fr_1.5fr] items-center justify-items-center w-2/3">
+                <p>ردیف</p>
+                <p>نام و نام خانوادگی</p>
+                <p>استان</p>
+                <p>تخصص</p>
+            </div>
+            <div class="grid grid-cols-[2fr_4fr_2fr_2.5fr_1.5fr] items-center justify-items-center w-2/3">
+                <p>ردیف</p>
+                <p>نام و نام خانوادگی</p>
+                <p>استان</p>
+                <p>تخصص</p>
+            </div>
+        </div>
       </div>
-    </footer>
+    </main>
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
   </body>
 </html>
