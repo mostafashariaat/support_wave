@@ -687,6 +687,10 @@ video {
   isolation: auto;
 }
 
+.z-10 {
+  z-index: 10;
+}
+
 .float-start {
   float: inline-start;
 }
@@ -858,6 +862,10 @@ video {
   height: 2rem;
 }
 
+.h-\[350px\] {
+  height: 350px;
+}
+
 .h-\[70px\] {
   height: 70px;
 }
@@ -878,28 +886,8 @@ video {
   width: 100px;
 }
 
-.w-\[300\] {
-  width: 300;
-}
-
-.w-\[100px\] {
-  width: 100px;
-}
-
-.w-\[300\] {
-  width: 300;
-}
-
-.w-\[100px\] {
-  width: 100px;
-}
-
-.w-\[300\] {
-  width: 300;
-}
-
-.w-\[100px\] {
-  width: 100px;
+.w-\[250px\] {
+  width: 250px;
 }
 
 .w-\[40px\] {
@@ -912,6 +900,10 @@ video {
 
 .w-\[50px\] {
   width: 50px;
+}
+
+.w-\[55px\] {
+  width: 55px;
 }
 
 .w-\[60px\] {
@@ -932,6 +924,10 @@ video {
 
 .w-full {
   width: 100%;
+}
+
+.max-w-\[600px\] {
+  max-width: 600px;
 }
 
 .flex-shrink {
@@ -1488,6 +1484,10 @@ video {
   gap: 1rem;
 }
 
+.gap-6 {
+  gap: 1.5rem;
+}
+
 .gap-8 {
   gap: 2rem;
 }
@@ -1977,6 +1977,11 @@ video {
   background-color: rgb(255 0 0 / var(--tw-bg-opacity));
 }
 
+.bg-neutral {
+  --tw-bg-opacity: 1;
+  background-color: rgb(50 50 50 / var(--tw-bg-opacity));
+}
+
 .bg-primery {
   --tw-bg-opacity: 1;
   background-color: rgb(212 50 78 / var(--tw-bg-opacity));
@@ -2134,9 +2139,19 @@ video {
   padding-right: 1.5rem;
 }
 
+.px-8 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
 .py-1 {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
+}
+
+.py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .py-3 {
@@ -2658,10 +2673,6 @@ video {
   transition-duration: 150ms;
 }
 
-.duration-500 {
-  transition-duration: 500ms;
-}
-
 .duration-300 {
   transition-duration: 300ms;
 }
@@ -2772,6 +2783,16 @@ video {
 .hover\:border-white:hover {
   --tw-border-opacity: 1;
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
+}
+
+.hover\:bg-\[\#cce8e8\]:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(204 232 232 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-\[\#f7d6db\]:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(247 214 219 / var(--tw-bg-opacity));
 }
 
 .hover\:bg-primery\/20:hover {
