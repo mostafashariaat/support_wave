@@ -894,6 +894,14 @@ video {
   width: 100px;
 }
 
+.w-\[300\] {
+  width: 300;
+}
+
+.w-\[100px\] {
+  width: 100px;
+}
+
 .w-\[40px\] {
   width: 40px;
 }
