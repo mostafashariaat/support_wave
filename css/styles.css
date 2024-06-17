@@ -15,3 +15,15 @@
 /* videos page styles */
 
 /* vote pages styles */
+
+.people_count{
+   
+    font-size: 130px;
+}
+
+@media (max-width: 992px) {
+    .people_count{
+   
+        font-size: 110px;
+    }
+}
