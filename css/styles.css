@@ -1,21 +1,34 @@
 /* هر کدوم رو اگه می‌تونی زیر همون بخش بزن که منظم باشه */
 
 /* global styles */
-.active_paginate{
+.active_paginate {
     background-color: white !important;
     color: black !important;
 }
 
-.active_paginate:hover{
+.active_paginate:hover {
     background-color: #cce8e8 !important;
 }
 
-.active_icon{
+.active_icon {
     background-color: #DEFFFF !important;
     color: black !important;
 }
-.active_icon:hover{
+
+.active_icon:hover {
     background-color: #afecec !important;
+}
+
+.opacity {
+    background:
+        /*linear-gradient(0deg, rgb(255, 255, 255), rgba(255, 0, 0, 0) 30.71%),*/
+        /* linear-gradient(127deg, transparent, rgb(255, 255, 255) 100%), */
+        linear-gradient(to top, rgb(255, 255, 255) 0%, transparent 70%), url(/public/images/pattern-0.5.png);
+}
+
+.opacity_jalili {
+    background:
+        linear-gradient(to top, rgb(255, 255, 255) 0%, transparent 70%)
 }
 
 /* index page styles */
@@ -32,14 +45,14 @@
 
 /* vote pages styles */
 
-.people_count{
-   
+.people_count {
+
     font-size: 130px;
 }
 
 @media (max-width: 992px) {
-    .people_count{
-   
+    .people_count {
+
         font-size: 110px;
     }
 }

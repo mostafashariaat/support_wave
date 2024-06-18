@@ -1,13 +1,34 @@
 <!DOCTYPE html>
 <html lang="fa">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>موج حمایت</title>
-    <link rel="stylesheet" href="css/styles.css">
-
-</head>
-<body>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link href="./dist/output.css" rel="stylesheet" />
+  </head>
+  <body class="overflow-x-hidden select-none">
     <!-- videos page (صفحه ویدئو‌ها ) -->
-</body>
+    <div class="opacity bg-secondry w-full flex-col md:flex-row h-[1000px] pt-10 px-20 relative">
+      <div class="flex flex-col gap-12 mt-10 sm:mt-20 md:mt-30 lg:mt-40">
+        <h1 class="text-white font-black text-xl sm:text-3xl md:text-5xl lg:text-7xl">هر ایرانی یک نقش عجیب!</h1>
+        <p class="max-w-[70%] text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold !leading-[150%]">
+          لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده
+          از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و
+          سطرآنچنان که لازم است
+        </p>
+      </div>
+      <img
+        src="public/images/jalili_video.png"
+        alt="jalili"
+        class="w-2/5 absolute top-[50px] left-0"
+      />
+    </div>
+    <div class="grid w-full grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 absolute top-[300px] sm:top-[350px] md:top-[400] lg:top-[650px] px-10">
+        <video src="public/videos/test.mp4" class="mt-10 sm:mt-16 md:mt-20 lg:mt-[100px] rounded-lg" controls></video>
+        <video src="public/videos/test.mp4" class="top-10 rounded-lg" controls></video>
+        <video src="public/videos/test.mp4" class="mt-10 sm:mt-16 md:mt-20 lg:mt-[100px] rounded-lg" controls></video>
+        <video src="public/videos/test.mp4" class="top-10 rounded-lg" controls></video>
+    </div>
+  </body>
 </html>
