@@ -747,6 +747,15 @@ video {
   clear: none;
 }
 
+.m-\[150px\] {
+  margin: 150px;
+}
+
+.mx-\[150px\] {
+  margin-left: 150px;
+  margin-right: 150px;
+}
+
 .-mt-8 {
   margin-top: -2rem;
 }
@@ -874,10 +883,6 @@ video {
   height: 2rem;
 }
 
-.h-\[1000px\] {
-  height: 1000px;
-}
-
 .h-\[60px\] {
   height: 60px;
 }
@@ -958,8 +963,16 @@ video {
   max-width: 70%;
 }
 
+.max-w-\[85\%\] {
+  max-width: 85%;
+}
+
 .max-w-\[850px\] {
   max-width: 850px;
+}
+
+.max-w-\[150px\] {
+  max-width: 150px;
 }
 
 .flex-shrink {
@@ -2316,8 +2329,8 @@ video {
   line-height: 1;
 }
 
-.text-\[40px\] {
-  font-size: 40px;
+.text-\[20px\] {
+  font-size: 20px;
 }
 
 .text-base {
@@ -2341,6 +2354,10 @@ video {
 
 .font-bold {
   font-weight: 700;
+}
+
+.font-extrabold {
+  font-weight: 800;
 }
 
 .uppercase {
@@ -2925,12 +2942,33 @@ video {
     top: 350px;
   }
 
+  .sm\:mx-\[100\%\] {
+    margin-left: 100%;
+    margin-right: 100%;
+  }
+
   .sm\:mt-16 {
     margin-top: 4rem;
   }
 
   .sm\:mt-20 {
     margin-top: 5rem;
+  }
+
+  .sm\:block {
+    display: block;
+  }
+
+  .sm\:hidden {
+    display: none;
+  }
+
+  .sm\:max-w-\[60\%\] {
+    max-width: 60%;
+  }
+
+  .sm\:max-w-\[100\%\] {
+    max-width: 100%;
   }
 
   .sm\:grid-cols-3 {
@@ -2941,6 +2979,14 @@ video {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
+  .sm\:items-start {
+    align-items: flex-start;
+  }
+
+  .sm\:justify-start {
+    justify-content: flex-start;
+  }
+
   .sm\:text-2xl {
     font-size: 1.5rem;
     line-height: 2rem;
@@ -2949,6 +2995,10 @@ video {
   .sm\:text-3xl {
     font-size: 1.875rem;
     line-height: 2.25rem;
+  }
+
+  .sm\:text-\[40px\] {
+    font-size: 40px;
   }
 
   .sm\:text-lg {
@@ -3077,6 +3127,11 @@ video {
     line-height: 2rem;
   }
 
+  .md\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+
   .md\:text-5xl {
     font-size: 3rem;
     line-height: 1;
@@ -3102,10 +3157,6 @@ video {
 }
 
 @media (min-width: 1024px) {
-  .lg\:top-\[680px\] {
-    top: 680px;
-  }
-
   .lg\:top-\[650px\] {
     top: 650px;
   }
@@ -3116,6 +3167,14 @@ video {
 
   .lg\:mt-\[100px\] {
     margin-top: 100px;
+  }
+
+  .lg\:max-w-\[90\%\] {
+    max-width: 90%;
+  }
+
+  .lg\:gap-12 {
+    gap: 3rem;
   }
 
   .lg\:px-12 {
@@ -3130,11 +3189,6 @@ video {
 
   .lg\:text-6xl {
     font-size: 3.75rem;
-    line-height: 1;
-  }
-
-  .lg\:text-7xl {
-    font-size: 4.5rem;
     line-height: 1;
   }
 }

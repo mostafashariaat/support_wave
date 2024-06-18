@@ -1,6 +1,25 @@
 /* هر کدوم رو اگه می‌تونی زیر همون بخش بزن که منظم باشه */
 
 /* global styles */
+@font-face {
+    font-family: "Estedad";
+    src: url("/fonts/Estedad-FD[KSHD\,wght].woff2");
+    font-weight: 400;
+}
+
+
+
+*,p,h1,body,h2,h3,h4,h5,h6,span{
+    font-family: "Estedad";
+}
+
+
+h1,h2,h3{
+    font-weight: 700;
+}
+
+
+
 .active_paginate {
     background-color: white !important;
     color: black !important;
@@ -54,5 +73,12 @@
     .people_count {
 
         font-size: 110px;
+    }
+}
+
+@media (max-width: 576px) {
+    .people_count {
+        
+        font-size: 90px;
     }
 }
