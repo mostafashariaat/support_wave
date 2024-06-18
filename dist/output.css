@@ -2971,6 +2971,22 @@ video {
     max-width: 100%;
   }
 
+  .sm\:max-w-\[300px\] {
+    max-width: 300px;
+  }
+
+  .sm\:max-w-\[200px\] {
+    max-width: 200px;
+  }
+
+  .sm\:max-w-\[250px\] {
+    max-width: 250px;
+  }
+
+  .sm\:max-w-\[220px\] {
+    max-width: 220px;
+  }
+
   .sm\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
@@ -3009,6 +3025,10 @@ video {
   .sm\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
+  }
+
+  .sm\:text-\[30px\] {
+    font-size: 30px;
   }
 
   .sm\:underline {
@@ -3171,6 +3191,14 @@ video {
 
   .lg\:max-w-\[90\%\] {
     max-width: 90%;
+  }
+
+  .lg\:max-w-\[\] {
+    max-width: ;
+  }
+
+  .lg\:max-w-\[100\%\] {
+    max-width: 100%;
   }
 
   .lg\:gap-12 {
