@@ -1,6 +1,22 @@
 /* هر کدوم رو اگه می‌تونی زیر همون بخش بزن که منظم باشه */
 
 /* global styles */
+.active_paginate{
+    background-color: white !important;
+    color: black !important;
+}
+
+.active_paginate:hover{
+    background-color: #cce8e8 !important;
+}
+
+.active_icon{
+    background-color: #DEFFFF !important;
+    color: black !important;
+}
+.active_icon:hover{
+    background-color: #afecec !important;
+}
 
 /* index page styles */
 .table_opacity {
