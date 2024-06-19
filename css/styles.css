@@ -9,8 +9,11 @@
 
 
 
-*,p,h1,body,h2,h3,h4,h5,h6,span,button,label,input{
+*,p,h1,body,h2,h3,h4,h5,h6,span,button,label,input,li,ul,ol{
     font-family: "Estedad";
+}
+button{
+    font-family: "Estedad"!important;
 }
 
 
