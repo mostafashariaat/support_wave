@@ -6,6 +6,11 @@
     <title>موج حمایت</title>
     <link rel="stylesheet" href="css/styles.css" />
     <link href="./dist/output.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
   </head>
   <body class="overflow-x-hidden select-none">
     <header
@@ -42,7 +47,7 @@
           <div
             class="flex w-full justify-center items-center flex-col gap-0 md:gap-4"
           >
-            <h1 class="text-5xl md:text-[130px] font-black">300,784 نفر</h1>
+            <h1 class="text-5xl md:text-[130px] font-black supporters_count">300,784 نفر</h1>
             <div
               class="bg-primery flex gap-[10px] items-center justify-center py-3 px-12 rounded-xl mt-4"
             >
@@ -99,29 +104,40 @@
               <label for="state" class="text-white text-lg whitespace-nowrap"
                 >استان</label
               >
-              <select
+              <!-- <select
                 name="state"
                 id="state"
                 class="w-[200px] md:w-32 h-8 rounded-lg bg-white cursor-pointer"
-              ></select>
+              ></select> -->
+             
+              <select
+                data-placeholder=""
+                name="state[]"
+                id="state"
+                class="w-[200px] md:w-32 h-8 rounded-lg bg-white cursor-pointer chosen-selectQ state"
+              >
+            </select>
+          
             </div>
             <div
               class="flex justify-between md:justify-center items-center gap-2 w-full"
             >
               <label
-                for="experience"
+                for="work"
                 class="text-white text-lg whitespace-nowrap"
-                >تخصص</label
+                >شغل</label
               >
               <select
-                name="experience"
-                id="experience"
-                class="w-[200px] md:w-32 h-8 rounded-lg bg-white cursor-pointer"
-              ></select>
+              data-placeholder=""
+              name="work[]"
+              id="work"
+              class="w-[200px] md:w-32 h-8 rounded-lg bg-white cursor-pointer chosen-selectQ work"
+            >
+          </select>
             </div>
           </div>
           <button
-            class="whitespace-nowrap px-3 md:px-6 py-1 md:py-3 border-2 md:border-4 border-secondry rounded-lg text-secondry font-bold hover:bg-secondry/20 transition-all duration-300 text-[20px]"
+            class="whitespace-nowrap px-3 md:px-6 py-1 md:py-3 border-2 md:border-4 border-secondry rounded-lg text-secondry font-bold hover:bg-secondry/20 transition-all duration-300 text-[20px] support_button"
           >
             حمایت می‌کنم
           </button>
@@ -153,15 +169,15 @@
           class="flex flex-col gap-0.5 items-center justify-center w-full table_opacity"
         >
           <div
-            class="grid grid-cols-[2fr_4fr_2fr_2.5fr_1.5fr] items-center justify-items-center w-[90%] max-w-[850px] font-bold text-ms sm:text-lg md:text-xl"
+            class="grid grid-cols-[2fr_4fr_2fr_2.5fr] items-center justify-items-center w-[90%] max-w-[850px] font-bold text-ms sm:text-lg md:text-xl"
           >
             <p>ردیف</p>
             <p>نام و نام خانوادگی</p>
             <p>استان</p>
-            <p>تخصص</p>
+            <p>شغل</p>
           </div>
           <div
-            class="grid grid-cols-[2fr_4fr_2fr_2.5fr_1.5fr] items-center justify-items-center w-[90%] max-w-[850px] font-bold text-ms sm:text-lg md:text-xl bg-primery rounded-lg text-white gap-1 mt-1"
+            class="grid grid-cols-[2fr_4fr_2fr_2.5fr] items-center justify-items-center w-[90%] max-w-[850px] font-bold text-ms sm:text-lg md:text-xl bg-primery rounded-lg text-white gap-1 mt-1"
           >
             <p
               class="border-l border-white w-full text-center py-3 overflow-hidden text-ellipsis whitespace-nowrap"
@@ -183,10 +199,9 @@
             >
               کارشناس پزشکی
             </p>
-            <p class="hami">حامی ام</p>
           </div>
           <div
-            class="grid grid-cols-[2fr_4fr_2fr_2.5fr_1.5fr] items-center justify-items-center w-[90%] max-w-[850px] font-bold text-ms sm:text-lg md:text-xl bg-primery rounded-lg text-white gap-1 mt-1"
+            class="grid grid-cols-[2fr_4fr_2fr_2.5fr] items-center justify-items-center w-[90%] max-w-[850px] font-bold text-ms sm:text-lg md:text-xl bg-primery rounded-lg text-white gap-1 mt-1"
           >
             <p
               class="border-l border-white w-full text-center py-3 overflow-hidden text-ellipsis whitespace-nowrap"
@@ -208,10 +223,9 @@
             >
               کارشناس پزشکی
             </p>
-            <p class="hami">حامی ام</p>
           </div>
           <div
-            class="grid grid-cols-[2fr_4fr_2fr_2.5fr_1.5fr] items-center justify-items-center w-[90%] max-w-[850px] font-bold text-ms sm:text-lg md:text-xl bg-primery rounded-lg text-white gap-1 mt-1"
+            class="grid grid-cols-[2fr_4fr_2fr_2.5fr] items-center justify-items-center w-[90%] max-w-[850px] font-bold text-ms sm:text-lg md:text-xl bg-primery rounded-lg text-white gap-1 mt-1"
           >
             <p
               class="border-l border-white w-full text-center py-3 overflow-hidden text-ellipsis whitespace-nowrap"
@@ -233,10 +247,9 @@
             >
               کارشناس پزشکی
             </p>
-            <p class="hami">حامی ام</p>
           </div>
           <div
-            class="grid grid-cols-[2fr_4fr_2fr_2.5fr_1.5fr] items-center justify-items-center w-[90%] max-w-[850px] font-bold text-ms sm:text-lg md:text-xl bg-primery rounded-lg text-white gap-1 mt-1"
+            class="grid grid-cols-[2fr_4fr_2fr_2.5fr] items-center justify-items-center w-[90%] max-w-[850px] font-bold text-ms sm:text-lg md:text-xl bg-primery rounded-lg text-white gap-1 mt-1"
           >
             <p
               class="border-l border-white w-full text-center py-3 overflow-hidden text-ellipsis whitespace-nowrap"
@@ -258,7 +271,6 @@
             >
               کارشناس پزشکی
             </p>
-            <p class="hami">حامی ام</p>
           </div>
         </div>
         <button
@@ -351,6 +363,9 @@
         />
       </div>
     </footer>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script> -->
+    <script src="https://harvesthq.github.io/chosen/chosen.jquery.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script type="module" src="js/index.js"></script>
   </body>
 </html>

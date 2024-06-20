@@ -17,6 +17,50 @@ function showToastify({text,background="#038b8b"}){
 }
 
 
+function selectedId(className) {
+  const selectedOptions = $(className).find(":selected");
+  return selectedOptions
+    .map(function () {
+      return $(this).attr("id");
+    })
+    .get();
+}
+
+
+function selectsItemsValue(element, data, ids = []) {
+  // console.log(element,data);
+    if (!element || !data) return;
+    if (!data?._id) {
+      selectsItemsValueHTML(element, data, ids);
+    } else {
+      element.innerHTML = optionHTML(data);
+      // console.log(element, data);
+    }
+    $(element).trigger("chosen:updated");
+  }
+  
+  function selectsItemsValueHTML(element, data, ids = []) {
+    if (!element || !data) return;
+    element.innerHTML = data
+      ?.map((item) => {
+        let selected = false;
+        if (ids?.includes(item?.id)) selected = true;
+        return optionHTML(item, selected);
+      })
+      .join("");
+    $(element).chosen();
+  }
+
+
+  function optionHTML(item, selected = false) {
+    if (!item) return;
+    return `<option class="options option-edit" ${
+      selected ? "selected" : ""
+    } id=${item?.id} 
+    data-id=${item?.id}>
+    ${item?.title}
+    </option>`;
+  }
 
 async function  getDataFromServer(url) {
     const ajax = await fetch(url)
@@ -63,4 +107,4 @@ async function postDataToServer(url, data={},message="",background="#f0f0f0") {
 
 
 
-export {getDataFromServer,postDataToServer,showToastify}
+export {getDataFromServer,postDataToServer,showToastify,selectsItemsValue,selectedId}
