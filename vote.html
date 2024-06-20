@@ -6,6 +6,8 @@
     <title>موج حمایت</title>
     <link rel="stylesheet" href="css/styles.css">
     <link href="./dist/output.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
 </head>
 <body>
     <!-- vote page (صفحه رای می‌دهم ) -->
@@ -18,7 +20,7 @@
                 alt="test"
               /></div>
             <div class="flex w-full justify-center items-center flex-col gap-4">
-              <h1 class="font-black people_count">300,784</h1>
+              <h1 class="font-black people_count vote_number">300,784</h1>
               <div
                 class="bg-primery flex gap-8 items-center justify-center py-3 px-8 lg:px-12 rounded-xl"
               >
@@ -46,7 +48,7 @@
 من هم رای می‌دهم 
                 </h2>
               </div>
-              <div class="relative max-w-[150px] sm:max-w-[220px] ">
+              <div class="relative max-w-[150px] sm:max-w-[220px] cursor-pointer vote_button">
                 <img
                 src="public/images/red_button.png"
                 class=""
@@ -68,5 +70,7 @@
           </div>
         </div>
       </main>
+      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+      <script type="module" src="js/vote.js"></script>
 </body>
 </html>
