@@ -36,7 +36,7 @@ function selectsItemsValue(element, data, ids = []) {
       element.innerHTML = optionHTML(data);
       // console.log(element, data);
     }
-    $(element).trigger("chosen:updated");
+    // $(element).trigger("chosen:updated");
   }
   
   function selectsItemsValueHTML(element, data, ids = []) {
@@ -48,7 +48,7 @@ function selectsItemsValue(element, data, ids = []) {
         return optionHTML(item, selected);
       })
       .join("");
-    $(element).chosen();
+    // $(element).chosen();
   }
 
 
@@ -62,8 +62,8 @@ function selectsItemsValue(element, data, ids = []) {
     </option>`;
   }
 
-async function  getDataFromServer(url) {
-    const ajax = await fetch(url)
+async function  getDataFromServer(url,page_size=50) {
+    const ajax = await fetch(url+`?page_size=${page_size}`)
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok ' + response.statusText);

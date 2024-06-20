@@ -9,10 +9,10 @@
 
 
 
-*,p,h1,body,h2,h3,h4,h5,h6,span,button,label,input,li,ul,ol{
+*,p,h1,body,h2,h3,h4,h5,h6,span,button,label,input,li,ul,ol,a{
     font-family: "Estedad";
 }
-button,.toastify,div{
+button,.toastify,div,option{
     font-family: "Estedad"!important;
 }
 
