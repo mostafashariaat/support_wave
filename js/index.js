@@ -1,5 +1,5 @@
 import { statesUrl,worksUrl,supportersUrl } from "./endpoints.js"
-import { getDataFromServer, postDataToServer, selectedId, selectsItemsValue, showToastify } from "./utils.js"
+import { getDataFromServer, postDataToServer, selectedId, selectsItemsValue, setQueryParams, showToastify } from "./utils.js"
 
 
 const supportButton = document.querySelector(".support_button")
@@ -10,6 +10,8 @@ const workDOM = document.querySelector("#work")
 const supportersCountDOM = document.querySelector(".supporters_count")
 $(".state").select2()
 // // $(".work").select2()
+
+
 
 
 async function getList(url,element){
@@ -29,7 +31,7 @@ getList(worksUrl,workDOM,".work");
 
 const supporters = await getDataFromServer(supportersUrl,10)
 const supportersResult = supporters.results;
-const supportersCount = await supporters?.count;
+const supportersCount = await supporters?.total_count;
 
 supportersCountDOM.innerHTML = `${supportersCount} نفر`;
 

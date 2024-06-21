@@ -1,4 +1,6 @@
 
+const paginateSize = 10;
+export {paginateSize}
 function showToastify({text,background="#038b8b"}){
     Toastify({
         text,
@@ -15,6 +17,18 @@ function showToastify({text,background="#038b8b"}){
       }).showToast();
     
 }
+
+function setQueryParams(url, params) {
+  let parser = new URL(url);
+  for (let key in params) {
+      if (params.hasOwnProperty(key)) {
+          parser.searchParams.set(key, params[key]);
+      }
+  }
+  return parser.toString();
+}
+
+
 
 
 function selectedId(className) {
@@ -63,7 +77,8 @@ function selectsItemsValue(element, data, ids = []) {
   }
 
 async function  getDataFromServer(url,page_size=50) {
-    const ajax = await fetch(url+`?page_size=${page_size}`)
+    const newUrl = url.includes("page_size") ? url : `${url}?page_size=${page_size}`
+    const ajax = await fetch(newUrl)
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok ' + response.statusText);
@@ -79,6 +94,10 @@ async function  getDataFromServer(url,page_size=50) {
         });
         return ajax;
 }
+
+
+
+
 
 async function postDataToServer(url, data={},message="",background="#f0f0f0") {
     const ajax = await fetch(url, {
@@ -107,4 +126,4 @@ async function postDataToServer(url, data={},message="",background="#f0f0f0") {
 
 
 
-export {getDataFromServer,postDataToServer,showToastify,selectsItemsValue,selectedId}
+export {getDataFromServer,postDataToServer,showToastify,selectsItemsValue,selectedId,setQueryParams}
