@@ -1,21 +1,25 @@
 import { statesUrl,worksUrl,supportersUrl } from "./endpoints.js"
-import { getDataFromServer, paginateSize, postDataToServer, selectedId, selectsItemsValue, setQueryParams, showToastify } from "./utils.js"
+import { getDataFromServer, paginateSize, postDataToServer, selectedId, supporterHTML,selectsItemsValue, setQueryParams, showToastify } from "./utils.js"
 
-// const x = setQueryParams(supportersUrl,{page:1,count:2})
-// console.log(x);
+
 const supportersCountDOM = document.querySelector(".supporters_count")
+const workDOM = document.querySelector(".supports-filter")
+const worksFilter = await getDataFromServer(worksUrl,20)
+const worksFilterResult = worksFilter.results;
+worksHTML(workDOM,worksFilterResult) 
+
+
 const supportersList = document.querySelector(".supporter-list")
 const paginationDOM = document.querySelector(".pagination-container")
-const supporters = await getDataFromServer(supportersUrl,10)
+const supporters = await getDataFromServer(supportersUrl,20)
 const supportersResult = supporters.results;
 const supportersCount = await supporters?.count;
 
-// const x = createPagintion(30,10,3)
-// console.log(x);
+
 supporterHTML(supportersList,supportersResult);
 
 function pagination(page){
-    const paginatedArray = createPagintion(supportersCount,paginateSize,page?page:1)
+    const paginatedArray = createPagintion(supportersCount,20,page?page:1)
     paginationHTML(paginationDOM,paginatedArray,page)
 }
 
@@ -71,7 +75,7 @@ function paginationHTML(element,pages,active_page=1){
     element.innerHTML = pages.map(page=>{
         if(page ==="...") return `<p class="font-bold text-2xl">...</p>`
         return `<div
-          class="h-8 aspect-square flex justify-center items-center rounded border-2 border-secondry hover:border-secondry-hover text-white bg-secondry hover:bg-secondry-hover cursor-pointer transition-all duration-300 font-bold text-xl ${page===active_page?"active_paginate": ""} pageination-number " data-id="${page}" >
+          class="h-8 aspect-square flex justify-center items-center rounded border-2 border-secondry hover:border-secondry-hover text-white bg-secondry hover:bg-secondry-hover cursor-pointer transition-all duration-300 font-bold text-xl px-[20px] ${page===active_page?"active_paginate": ""} pageination-number " data-id="${page}" >
           ${page}
         </div>`
     }).join("")
@@ -81,7 +85,7 @@ function paginationHTML(element,pages,active_page=1){
         number.addEventListener('click',async()=>{
             // console.log('yes');
             const page = Number(number.dataset.id);
-            const newSupporterUrl = setQueryParams(supportersUrl,{page:page,page_size:paginateSize})
+            const newSupporterUrl = setQueryParams(supportersUrl,{page:page,page_size:20})
             const supporters = await getDataFromServer(newSupporterUrl)
             const results = supporters.results;
             supporterHTML(supportersList,results);
@@ -91,39 +95,14 @@ function paginationHTML(element,pages,active_page=1){
 }
 
 
-
-
-
-function supporterHTML(element,data) {
-    console.log('log');
-    element.innerHTML = data.map(item=>{ 
+function worksHTML(element,data) {
+    element.innerHTML = data.map(item=>{
         return `<div
-          class="flex items-center justify-items-center font-bold text-ms sm:text-lg md:text-xl bg-primery rounded-lg text-white gap-1 mt-1"
-        >
-          <p
-            class="border-l border-white w-full text-center py-3 overflow-hidden text-ellipsis whitespace-nowrap"
-          >
-            ${item.id}
-          </p>
-          <p
-            class="border-l border-white w-full text-center py-3 overflow-hidden text-ellipsis whitespace-nowrap"
-          >
-           ${item.full_name}
-          </p>
-          <p
-            class="border-l border-white w-full text-center py-3 overflow-hidden text-ellipsis whitespace-nowrap"
-          >
-           ${item.province.title}
-          </p>
-          <p
-            class="border-l border-white w-full text-center py-3 overflow-hidden text-ellipsis whitespace-nowrap"
-          >
-            ${item.expertise.title}
-          </p>
-        </div>`    
+                class="flex cursor-pointer transition-all duration-300 w-full justify-center items-center text-center aspect-square bg-secondry align-item-center border-2 border-secondry rounded-3xl hover:bg-secondry-hover hover:border-secondry-hover p-2 text-white align-center  active_icon">
+                <p class="text-xl font-bold">${item.title}</p>
+                </div>
+`
     }).join("")
-
+    
 }
 
-
-export {supporterHTML}

@@ -4,6 +4,7 @@ const voteUrl = `${baseUrl}${supportUrl}/vote/`
 const supportersUrl = `${baseUrl}${supportUrl}/supports/`
 const statesUrl = `${baseUrl}${supportUrl}/provinces/`
 const worksUrl = `${baseUrl}${supportUrl}/expertise/`
+const demandUrl = `${baseUrl}${supportUrl}/demands/`
 
 
 
@@ -18,4 +19,4 @@ const worksUrl = `${baseUrl}${supportUrl}/expertise/`
 
 
 
-export {baseUrl,voteUrl,supportersUrl,statesUrl,worksUrl}
+export {baseUrl,voteUrl,supportersUrl,statesUrl,worksUrl,demandUrl}

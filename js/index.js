@@ -1,6 +1,6 @@
 import { statesUrl,worksUrl,supportersUrl } from "./endpoints.js"
-import { getDataFromServer, postDataToServer, selectedId, selectsItemsValue, setQueryParams, showToastify } from "./utils.js"
-
+import { getDataFromServer, postDataToServer, selectedId, selectsItemsValue, setQueryParams, showToastify,supporterHTML } from "./utils.js"
+// import {supporterHTML} from "./support.js"
 
 const supportButton = document.querySelector(".support_button")
 const supportersList = document.querySelector(".supporter-list")
@@ -33,7 +33,7 @@ const supporters = await getDataFromServer(supportersUrl,10)
 const supportersResult = supporters.results;
 const supportersCount = await supporters?.total_count;
 
-supportersCountDOM.innerHTML = `${supportersCount} نفر`;
+supportersCountDOM.innerHTML = `${supportersCount.toLocaleString()} نفر`;
 
 supporterHTML(supportersList,supportersResult);
 
@@ -61,35 +61,3 @@ supportButton.addEventListener("click",async()=>{
 
 
 
-function supporterHTML(element,data) {
-    element.innerHTML = data.map(item=>{ 
-        return `<div
-          class="flex items-center justify-items-center font-bold text-ms sm:text-lg md:text-xl bg-primery rounded-lg text-white gap-1 mt-1"
-        >
-          <p
-            class="border-l border-white w-full text-center py-3 overflow-hidden text-ellipsis whitespace-nowrap"
-          >
-            ${item.id}
-          </p>
-          <p
-            class="border-l border-white w-full text-center py-3 overflow-hidden text-ellipsis whitespace-nowrap"
-          >
-           ${item.full_name}
-          </p>
-          <p
-            class="border-l border-white w-full text-center py-3 overflow-hidden text-ellipsis whitespace-nowrap"
-          >
-           ${item.province.title}
-          </p>
-          <p
-            class="border-l border-white w-full text-center py-3 overflow-hidden text-ellipsis whitespace-nowrap"
-          >
-            ${item.expertise.title}
-          </p>
-        </div>`    
-    }).join("")
-
-}
-
-
-export {supporterHTML}

@@ -125,5 +125,55 @@ async function postDataToServer(url, data={},message="",background="#f0f0f0") {
 
 
 
+function supporterHTML(element,data) {
+  // console.log('log');
+  element.innerHTML = data.map(item=>{ 
+      return `<div
+        class="flex items-center justify-items-center font-bold text-ms sm:text-lg md:text-xl bg-primery rounded-lg text-white gap-1 mt-1"
+      >
+        <p
+          class="border-l border-white w-full text-center py-3 overflow-hidden text-ellipsis whitespace-nowrap hidden md:block"
+        >
+          ${item.id}
+        </p>
+        <p
+          class="border-l border-white w-full text-center py-3 overflow-hidden text-ellipsis whitespace-nowrap"
+        >
+         ${item.full_name}
+        </p>
+        <p
+          class="border-l border-white w-full text-center py-3 overflow-hidden text-ellipsis whitespace-nowrap"
+        >
+         ${item.province.title}
+        </p>
+        <p
+          class="border-l border-white w-full text-center py-3 overflow-hidden text-ellipsis whitespace-nowrap"
+        >
+          ${item.expertise.title}
+        </p>
+      </div>`    
+  }).join("")
 
-export {getDataFromServer,postDataToServer,showToastify,selectsItemsValue,selectedId,setQueryParams}
+}
+
+function toEnglishDigits(num) {
+
+  const id = {
+    '۰': '0',
+    '۱': '1',
+    '۲': '2',
+    '۳': '3',
+    '۴': '4',
+    '۵': '5',
+    '۶': '6',
+    '۷': '7',
+    '۸': '8',
+    '۹': '9',
+  }
+  return num ? num.toString().replace(/[^0-9.]/g, function (w) {
+    return id[w] || w
+  }) : null
+}
+
+
+export {getDataFromServer,postDataToServer,showToastify,selectsItemsValue,selectedId,setQueryParams,supporterHTML,toEnglishDigits}

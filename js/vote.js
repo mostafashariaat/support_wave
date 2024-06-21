@@ -5,7 +5,7 @@ const voteNumberDOM = document.querySelector(".vote_number")
 
 
 async function updateVoteNumber(element,count) {
-    element.innerHTML = count.count;
+    element.innerHTML = count.count.toLocaleString();
 
 }
 

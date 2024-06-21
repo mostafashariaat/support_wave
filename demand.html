@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fa">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>موج حمایت</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" href="css/styles.css" />
+    <link href="./dist/output.css" rel="stylesheet" />
+  </head>
+  <body class="overflow-x-hidden select-none">
+    <div class="bg-[url('/public/images/pattern-0.5.png')] bg-blend-multiply bg-cover w-[100%]" style="min-height: 100vh;" > 
+    <!-- supporters page (صفحه حامیان) -->
+    <div
+      class=" w-full flex flex-col justify-center items-center py-10 gap-6"
+    >
+      <div class="flex gap-2 items-center justify-center">
+        <div class="aspect-square w-8 md:w-[50px] relative">
+          <div
+            class="absolute top-0 left-0 bg-secondry rounded-xl aspect-square w-[26px] md:w-[40px]"
+          ></div>
+          <div
+            class="absolute bottom-0 right-0 bg-primery rounded-xl aspect-square w-[26px] md:w-[40px]"
+          ></div>
+        </div>
+        <h1 class="text-xl sm:text-3xl md:text-5xl font-bold text-center">
+          مطالبه از دکتر جلیلی
+        </h1>
+        <div class="aspect-square w-8 md:w-[50px] relative">
+          <div
+            class="absolute top-0 left-0 bg-secondry rounded-xl aspect-square w-[26px] md:w-[40px]"
+          ></div>
+          <div
+            class="absolute bottom-0 right-0 bg-primery rounded-xl aspect-square w-[26px] md:w-[40px]"
+          ></div>
+        </div>
+      </div>
+      <div class="bg-secondry rounded-xl flex flex-col   gap-2 md:gap-4 p-5 md:p-3.5"> 
+      <div
+      class=" flex flex-col md:flex-row items-center justify-center gap-2 md:gap-4 ">
+
+      <div
+        class="flex justify-between md:justify-center items-center gap-2 w-full"
+      >
+        <label for="name" class="text-white text-lg whitespace-nowrap"
+          >نام و نام خانوادگی</label
+        >
+        <input
+          type="text"
+          name="name"
+          id="name"
+          class="rounded-lg outline-none px-2 h-8 w-[200px]"
+        />
+      </div>
+      <div
+        class="flex justify-between md:justify-center items-center gap-2 w-full"
+      >
+        <label for="state" class="text-white text-lg whitespace-nowrap"
+          >تلفن همراه</label
+        >
+       
+        <input
+          type="text"
+          name="phone_number"
+          id="phone_number"
+          class="rounded-lg outline-none px-2 h-8 w-[200px]"
+        />
+    
+      </div>
+      <div class="flex gap-2 self-start md:self-center	w-[100%]"> 
+      <p class="text-white w-[100%]"> جنسیت </p>
+      <div
+        class="flex  items-center gap-2 w-full"
+      >
+        <div class="flex items-center  gap-1">
+            <input id="man" type="radio" value="M" name="gender" checked class="w-5 h-5 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+            <label for="man" class="ms-2 text-sm font-medium text-white">مرد</label>
+        </div>
+        <div class="flex items-center  gap-1">
+            <input id="women" type="radio" value="F" name="gender" class="w-5 h-5 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+            <label for="women" class="ms-2 text-sm font-medium text-white">زن</label>
+        </div>
+      </div>
+    </div>
+    </div>
+   <div class="flex flex-col gap-1">
+    <label for="message" class="text-white text-lg whitespace-nowrap">مطالبه شما</label>
+    <textarea id="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-white rounded-lg border border-white-300 focus:border-white-300 active:border-white-300" placeholder="مطالبه خود را بنویسید ..."></textarea>
+   </div>
+</div>
+    <button
+      class="whitespace-nowrap px-3 md:px-6 py-1 md:py-3 border-2 md:border-4 border-secondry rounded-lg text-white font-bold hover:bg-white hover:text-secondry transition-all duration-300 text-[20px] send_demand bg-secondry"
+    >
+     ارسال
+    </button>
+  </div>
+    </div>
+</div>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+    <script type="module" src="js/demand.js"></script>
+  </body>
+</html>
