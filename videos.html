@@ -71,7 +71,7 @@
       />
       </div>
       <div class="flex items-center justify-center sm:items-start sm:justify-start flex-col lg:gap-12 gap-4 sm:mt-20 md:mt-30 lg:mt-40">
-        <h1 class="max-w-[70%] text-white font-black text-xl sm:text-3xl md:text-4xl lg:text-6xl lg:max-w-[90%]">هر ایرانی یک نقش عجیب!</h1>
+        <h1 class="max-w-[70%] text-white font-black text-xl sm:text-3xl md:text-4xl lg:text-6xl lg:max-w-[90%]">هر ایرانی یک نقش پرشکوه!</h1>
         <p class="max-w-[85%] sm:max-w-[60%] text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold !leading-[150%] text-justify">
           لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده
           از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و
@@ -88,8 +88,8 @@
     
     </div>
    
-    <div class="grid w-full grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 absolute top-[300px] sm:top-[350px] md:top-[400] lg:top-[650px] px-10">
-        <video src="public/videos/test.mp4" class="mt-10 sm:mt-16 md:mt-20 lg:mt-[100px] rounded-lg" controls></video>
+    <div class="grid w-full grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4  px-10 my-10 mt-14 md:mt-20">
+        <!-- <video src="public/videos/short.mp4" controls="controls" preload="metadata" class="mt-10 sm:mt-16 md:mt-20 lg:mt-[100px] rounded-lg video" ></video>
         <video src="public/videos/test.mp4" class="top-10 rounded-lg" controls></video>
         <video src="public/videos/test.mp4" class="mt-10 sm:mt-16 md:mt-20 lg:mt-[100px] rounded-lg" controls></video>
         <video src="public/videos/test.mp4" class="top-10 rounded-lg" controls></video>
@@ -100,8 +100,14 @@
         <video src="public/videos/test.mp4" class="mt-10 sm:mt-16 md:mt-20 lg:mt-[100px] rounded-lg" controls></video>
         <video src="public/videos/test.mp4" class="top-10 rounded-lg" controls></video>
         <video src="public/videos/test.mp4" class="mt-10 sm:mt-16 md:mt-20 lg:mt-[100px] rounded-lg" controls></video>
-        <video src="public/videos/test.mp4" class="top-10 rounded-lg" controls></video>
+        <video src="public/videos/test.mp4" class="top-10 rounded-lg" controls></video> -->
+
+        <video id="player" playsinline controls preload="metadata" >
+          <source src="public/videos/test.mp4#t=1" type="video/mp4" />
+
+        </video>
     </div>
+
     <footer
       class="flex w-full justify-between items-center py-3 px-6 bg-primery"
     >
@@ -134,5 +140,7 @@
       
       </div>
     </footer>
+
+    <script type="module" src="videos.js"></script>
   </body>
 </html>

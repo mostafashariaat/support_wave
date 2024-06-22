@@ -683,10 +683,6 @@ video {
   top: 2.5rem;
 }
 
-.top-\[300px\] {
-  top: 300px;
-}
-
 .top-\[50px\] {
   top: 50px;
 }
@@ -756,6 +752,11 @@ video {
   margin-bottom: 2.5rem;
 }
 
+.my-2 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
 .ms-2 {
   margin-inline-start: 0.5rem;
 }
@@ -778,6 +779,18 @@ video {
 
 .mt-8 {
   margin-top: 2rem;
+}
+
+.mt-20 {
+  margin-top: 5rem;
+}
+
+.mt-14 {
+  margin-top: 3.5rem;
+}
+
+.mt-16 {
+  margin-top: 4rem;
 }
 
 .box-border {
@@ -1547,10 +1560,6 @@ video {
 
 .gap-4 {
   gap: 1rem;
-}
-
-.gap-5 {
-  gap: 1.25rem;
 }
 
 .gap-6 {
@@ -3016,10 +3025,6 @@ video {
 }
 
 @media (min-width: 640px) {
-  .sm\:top-\[350px\] {
-    top: 350px;
-  }
-
   .sm\:m-0 {
     margin: 0px;
   }
@@ -3098,10 +3103,6 @@ video {
 }
 
 @media (min-width: 768px) {
-  .md\:top-\[400\] {
-    top: 400;
-  }
-
   .md\:mt-20 {
     margin-top: 5rem;
   }
@@ -3186,16 +3187,16 @@ video {
     gap: 1rem;
   }
 
+  .md\:gap-5 {
+    gap: 1.25rem;
+  }
+
   .md\:gap-8 {
     gap: 2rem;
   }
 
   .md\:gap-\[50px\] {
     gap: 50px;
-  }
-
-  .md\:gap-5 {
-    gap: 1.25rem;
   }
 
   .md\:self-center {
@@ -3270,10 +3271,6 @@ video {
 }
 
 @media (min-width: 1024px) {
-  .lg\:top-\[650px\] {
-    top: 650px;
-  }
-
   .lg\:mt-40 {
     margin-top: 10rem;
   }
