@@ -671,6 +671,10 @@ video {
   left: 0px;
 }
 
+.left-\[50\%\] {
+  left: 50%;
+}
+
 .right-0 {
   right: 0px;
 }
@@ -681,6 +685,10 @@ video {
 
 .top-10 {
   top: 2.5rem;
+}
+
+.top-\[50\%\] {
+  top: 50%;
 }
 
 .top-\[50px\] {
@@ -752,11 +760,6 @@ video {
   margin-bottom: 2.5rem;
 }
 
-.my-2 {
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-}
-
 .ms-2 {
   margin-inline-start: 0.5rem;
 }
@@ -769,6 +772,10 @@ video {
   margin-top: 2.5rem;
 }
 
+.mt-14 {
+  margin-top: 3.5rem;
+}
+
 .mt-2 {
   margin-top: 0.5rem;
 }
@@ -779,18 +786,6 @@ video {
 
 .mt-8 {
   margin-top: 2rem;
-}
-
-.mt-20 {
-  margin-top: 5rem;
-}
-
-.mt-14 {
-  margin-top: 3.5rem;
-}
-
-.mt-16 {
-  margin-top: 4rem;
 }
 
 .box-border {
@@ -896,6 +891,10 @@ video {
   aspect-ratio: 1 / 1;
 }
 
+.h-12 {
+  height: 3rem;
+}
+
 .h-5 {
   height: 1.25rem;
 }
@@ -912,6 +911,22 @@ video {
   height: 100%;
 }
 
+.h-\[50px\] {
+  height: 50px;
+}
+
+.h-\[55\] {
+  height: 55;
+}
+
+.h-\[55px\] {
+  height: 55px;
+}
+
+.min-h-\[100\%\] {
+  min-height: 100%;
+}
+
 .w-10 {
   width: 2.5rem;
 }
@@ -922,6 +937,10 @@ video {
 
 .w-5 {
   width: 1.25rem;
+}
+
+.w-64 {
+  width: 16rem;
 }
 
 .w-7 {
@@ -978,6 +997,22 @@ video {
 
 .w-full {
   width: 100%;
+}
+
+.w-\[300px\] {
+  width: 300px;
+}
+
+.w-\[320px\] {
+  width: 320px;
+}
+
+.w-\[32\] {
+  width: 32;
+}
+
+.w-\[30px\] {
+  width: 30px;
 }
 
 .max-w-\[150px\] {
@@ -2195,6 +2230,10 @@ video {
   background-origin: content-box;
 }
 
+.fill-white {
+  fill: #fff;
+}
+
 .object-contain {
   -o-object-fit: contain;
      object-fit: contain;
@@ -2236,6 +2275,10 @@ video {
   padding: 1.25rem;
 }
 
+.p-10 {
+  padding: 2.5rem;
+}
+
 .px-10 {
   padding-left: 2.5rem;
   padding-right: 2.5rem;
@@ -2271,6 +2314,11 @@ video {
   padding-right: 2rem;
 }
 
+.px-\[15px\] {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
 .px-\[20px\] {
   padding-left: 20px;
   padding-right: 20px;
@@ -2299,11 +2347,6 @@ video {
 .py-6 {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
-}
-
-.py-\[3px\] {
-  padding-top: 3px;
-  padding-bottom: 3px;
 }
 
 .pt-10 {

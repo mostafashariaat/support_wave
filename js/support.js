@@ -1,25 +1,27 @@
 import { statesUrl,worksUrl,supportersUrl } from "./endpoints.js"
 import { getDataFromServer, paginateSize, postDataToServer, selectedId, supporterHTML,selectsItemsValue, setQueryParams, showToastify } from "./utils.js"
 import { loading } from "./loading.js"
+import { checkLocalStorage, setLocalStorage } from "./store.js"
+
 
 const supportersCountDOM = document.querySelector(".supporters_count")
-const workDOM = document.querySelector(".supports-filter")
+const worksDOM = document.querySelector(".supports-filter")
 
 loading()
 
 const worksFilter = await getDataFromServer(worksUrl,20)
 const worksFilterResult = worksFilter.results;
-worksHTML(workDOM,worksFilterResult) 
+worksHTML(worksDOM,worksFilterResult) 
 
 
-const supportersList = document.querySelector(".supporter-list")
+const supportersListDOM = document.querySelector(".supporter-list")
 const paginationDOM = document.querySelector(".pagination-container")
 const supporters = await getDataFromServer(supportersUrl,20)
 const supportersResult = supporters.results;
 const supportersCount = await supporters?.count;
 
 
-supporterHTML(supportersList,supportersResult);
+supporterHTML(supportersListDOM,supportersResult);
 
 function pagination(page){
     const paginatedArray = createPagintion(supportersCount,20,page?page:1)
@@ -28,6 +30,52 @@ function pagination(page){
 
 pagination(1)
 
+
+const supportButton = document.querySelector(".support_button")
+const supportersList = document.querySelector(".supporter-list")
+const nameDOM = document.querySelector("#name")
+const stateDOM = document.querySelector("#state")
+const workDOM = document.querySelector("#work")
+$(".state").select2()
+// // $(".work").select2()
+
+
+loading()
+
+async function getList(url,element){
+    const data = await getDataFromServer(url)
+    const dataResult = await data.results;
+    selectsItemsValue(element,dataResult);
+}
+
+
+getList(statesUrl,stateDOM,".state");
+
+getList(worksUrl,workDOM,".work");
+
+
+
+
+
+supportButton.addEventListener("click",async()=>{
+    const name = nameDOM.value;
+    const state = selectedId("#state")[0];
+    const work = selectedId("#work")[0];
+
+    if(!name || !state || !work){
+        const toast = {text:"لطفا تمام اطلاعات را تکمیل کنید ",background: "red"}
+        showToastify(toast);
+        return 
+    }
+    const data = {full_name:name,province:state,expertise:work}
+    if(checkLocalStorage("support",1)){showToastify({text: "شما قبلا حمایت کرده‌اید! ", background: "red"});return; }
+    await postDataToServer(supportersUrl,data,"اطلاعات شما با موفقیت ثبت شد!").then(r=>setLocalStorage("support",1))
+    const supporters = await getDataFromServer(supportersUrl,10)
+    const supportersResult = supporters.results;
+    supporterHTML(supportersList,supportersResult);
+    const supportersCount = await supporters?.count;
+    supportersCountDOM.innerHTML = `${supportersCount} نفر`
+})
 
 
 

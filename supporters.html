@@ -6,6 +6,10 @@
     <title>موج حمایت</title>
     <link rel="stylesheet" href="css/styles.css" />
     <link href="./dist/output.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
   </head>
   <body class="overflow-x-hidden select-none">
     <header
@@ -66,7 +70,7 @@
     <main class="invisible main"> 
     <!-- supporters page (صفحه حامیان) -->
     <div
-      class="bg-[url('/public/images/pattern-0.5.png')] bg-blend-multiply bg-cover w-full flex flex-col justify-center items-center py-10 gap-12"
+      class="bg-[url('/public/images/pattern-0.5.png')] bg-blend-multiply bg-cover w-full flex flex-col justify-center items-center py-10 gap-6"
     >
       <div class="flex gap-2 items-center justify-center">
         <div class="aspect-square w-8 md:w-[50px] relative">
@@ -89,8 +93,10 @@
           ></div>
         </div>
       </div>
+
       <!-- icons -->
-      <div class="w-[90%] max-w-[850px] gap-2 md:gap-3 grid grid-cols-4 sm:grid-cols-4 md:grid-cols-6 supports-filter"><div class="flex cursor-pointer transition-all duration-300 w-full justify-center items-center text-center aspect-square bg-secondry align-item-center border-2 border-secondry rounded-3xl hover:bg-secondry-hover hover:border-secondry-hover p-2 text-white align-center  active_icon">
+      <div class="w-[90%] max-w-[850px] gap-2 md:gap-3 grid grid-cols-4 sm:grid-cols-4 md:grid-cols-6 supports-filter">
+        <div class="flex cursor-pointer transition-all duration-300 w-full justify-center items-center text-center aspect-square bg-secondry align-item-center border-2 border-secondry rounded-3xl hover:bg-secondry-hover hover:border-secondry-hover p-2 text-white align-center  active_icon">
         <p class="text-xl font-bold">کارمند</p>
         </div>
 <div class="flex cursor-pointer transition-all duration-300 w-full justify-center items-center text-center aspect-square bg-secondry align-item-center border-2 border-secondry rounded-3xl hover:bg-secondry-hover hover:border-secondry-hover p-2 text-white align-center  active_icon">
@@ -114,7 +120,72 @@
 <div class="flex cursor-pointer transition-all duration-300 w-full justify-center items-center text-center aspect-square bg-secondry align-item-center border-2 border-secondry rounded-3xl hover:bg-secondry-hover hover:border-secondry-hover p-2 text-white align-center  active_icon">
         <p class="text-xl font-bold">حوزوی</p>
         </div>
+  </div>
+
+  <div
+  class="w-full flex flex-col md:flex-row gap-2 md:gap-8 justify-center items-center"
+>
+  <div
+    class="bg-secondry rounded-xl flex flex-col md:flex-row items-center justify-center gap-2 md:gap-4 p-2 md:p-3.5"
+  >
+    <div
+      class="flex justify-between md:justify-center items-center gap-2 w-full"
+    >
+      <label for="name" class="text-white text-lg whitespace-nowrap"
+        >نام و نام خانوادگی</label
+      >
+      <input
+        type="text"
+        name="name"
+        id="name"
+        class="rounded-lg outline-none px-2 h-8 w-[200px]"
+      />
+    </div>
+    <div
+      class="flex justify-between md:justify-center items-center gap-2 w-full"
+    >
+      <label for="state" class="text-white text-lg whitespace-nowrap"
+        >استان</label
+      >
+     
+      <select
+        data-placeholder=""
+        name="state[]"
+        id="state"
+        class="w-[200px] md:w-32 h-8 rounded-lg bg-white cursor-pointer  state"
+        data-select2-id="state"
+        data-select=""
+      >
+    </select>
+  
+    </div>
+    <div
+      class="flex justify-between md:justify-center items-center gap-2 w-full"
+    >
+      <label
+        for="work"
+        class="text-white text-lg whitespace-nowrap"
+
+        >شغل</label
+      >
+      <select
+      data-placeholder=""
+      name="work[]"
+      id="work"
+      class="w-[200px] md:w-32 h-8 rounded-lg bg-white cursor-pointer  work"
+      data-select2-id="work"
+
+    >
+  </select>
+    </div>
+  </div>
+  <button
+    class="whitespace-nowrap px-3 md:px-6 py-1 md:py-3 border-2 md:border-4 border-secondry rounded-lg text-secondry font-bold hover:bg-secondry/20 transition-all duration-300 text-[20px] support_button"
+  >
+    حمایت می‌کنم
+  </button>
 </div>
+
       <!-- table -->
       <div class="flex flex-col gap-0.5 items-center justify-center w-full">
         <div class="supporter-list w-[90%] max-w-[870px]"><div class="flex items-center justify-items-center font-bold text-ms sm:text-lg md:text-xl bg-primery rounded-lg text-white gap-1 mt-1">
@@ -430,6 +501,8 @@
       
       </div>
     </footer>
+    <script src="https://harvesthq.github.io/chosen/chosen.jquery.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script type="module" src="js/support.js"></script>
   </body>
 </html>
