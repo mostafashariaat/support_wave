@@ -1,7 +1,9 @@
 import { voteUrl } from "./endpoints.js";
-import { getDataFromServer, postDataToServer } from "./utils.js"
+import { getDataFromServer, postDataToServer, showToastify } from "./utils.js"
+import { setLocalStorage,getLocalStorage,checkLocalStorage } from "./store.js";
 const voteNumberDOM = document.querySelector(".vote_number")
-
+const voteBottonSrc = "public/images/green_button.png";
+const voteImage = document.querySelector(".vote_button_img");
 
 
 async function updateVoteNumber(element,count) {
@@ -10,6 +12,10 @@ async function updateVoteNumber(element,count) {
 }
 
 const voteNumber = await getDataFromServer(voteUrl);
+
+
+if(checkLocalStorage("vote",1)){voteImage.src = voteBottonSrc}
+
 updateVoteNumber(voteNumberDOM,voteNumber)
 
 
@@ -20,7 +26,12 @@ updateVoteNumber(voteNumberDOM,voteNumber)
 const voteButtonDOM = document.querySelector(".vote_button")
 
 voteButtonDOM.addEventListener("click",async ()=>{
-    postDataToServer(voteUrl,{},"رای شما با موفقیت ثبت شد")
+    if(checkLocalStorage("vote",1)){showToastify({text:"رای شما قبلا ثبت شده‌است!", background: "red"})}
+    // console.log(voteImage);
+    voteImage.src = voteBottonSrc;
+    await postDataToServer(voteUrl,{},"رای شما با موفقیت ثبت شد").then(d=>setLocalStorage("vote",1))
+
+
     const voteNumber = await getDataFromServer(voteUrl);
     updateVoteNumber(voteNumberDOM,voteNumber)
 })
