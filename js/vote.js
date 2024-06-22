@@ -26,7 +26,7 @@ updateVoteNumber(voteNumberDOM,voteNumber)
 const voteButtonDOM = document.querySelector(".vote_button")
 
 voteButtonDOM.addEventListener("click",async ()=>{
-    if(checkLocalStorage("vote",1)){showToastify({text:"رای شما قبلا ثبت شده‌است!", background: "red"})}
+    if(checkLocalStorage("vote",1)){showToastify({text:"رای شما قبلا ثبت شده‌است!", background: "red"});return}
     // console.log(voteImage);
     voteImage.src = voteBottonSrc;
     await postDataToServer(voteUrl,{},"رای شما با موفقیت ثبت شد").then(d=>setLocalStorage("vote",1))
