@@ -14,7 +14,7 @@ $(".state").select2()
 // // $(".work").select2()
 
 
-
+loading()
 
 async function getList(url,element){
     const data = await getDataFromServer(url)
@@ -37,7 +37,7 @@ const supportersCount = await supporters?.total_count;
 
 supportersCountDOM.innerHTML = `${supportersCount.toLocaleString()} نفر`;
 
-loading()
+
 
 supporterHTML(supportersList,supportersResult);
 

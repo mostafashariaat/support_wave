@@ -4,6 +4,9 @@ import { loading } from "./loading.js"
 
 const supportersCountDOM = document.querySelector(".supporters_count")
 const workDOM = document.querySelector(".supports-filter")
+
+loading()
+
 const worksFilter = await getDataFromServer(worksUrl,20)
 const worksFilterResult = worksFilter.results;
 worksHTML(workDOM,worksFilterResult) 
@@ -24,7 +27,6 @@ function pagination(page){
 }
 
 pagination(1)
-loading()
 
 
 
