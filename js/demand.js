@@ -1,4 +1,5 @@
 import { statesUrl,worksUrl,supportersUrl,demandUrl } from "./endpoints.js"
+import { loading } from "./loading.js"
 import {  postDataToServer, showToastify, toEnglishDigits } from "./utils.js"
 
 const demandButton = document.querySelector(".send_demand")
@@ -31,6 +32,8 @@ demandButton.addEventListener("click",async()=>{
    
 })
 
+
+loading()
 
 function restartDemandForm(){
     nameDOM.value = ""

@@ -1,4 +1,5 @@
 import { statesUrl,worksUrl,supportersUrl } from "./endpoints.js"
+import { loading } from "./loading.js"
 import { checkLocalStorage, setLocalStorage } from "./store.js"
 import { getDataFromServer, postDataToServer, selectedId, selectsItemsValue, setQueryParams, showToastify,supporterHTML } from "./utils.js"
 // import {supporterHTML} from "./support.js"
@@ -35,6 +36,8 @@ const supportersResult = supporters.results;
 const supportersCount = await supporters?.total_count;
 
 supportersCountDOM.innerHTML = `${supportersCount.toLocaleString()} نفر`;
+
+loading()
 
 supporterHTML(supportersList,supportersResult);
 

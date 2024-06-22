@@ -1,6 +1,6 @@
 import { statesUrl,worksUrl,supportersUrl } from "./endpoints.js"
 import { getDataFromServer, paginateSize, postDataToServer, selectedId, supporterHTML,selectsItemsValue, setQueryParams, showToastify } from "./utils.js"
-
+import { loading } from "./loading.js"
 
 const supportersCountDOM = document.querySelector(".supporters_count")
 const workDOM = document.querySelector(".supports-filter")
@@ -24,6 +24,7 @@ function pagination(page){
 }
 
 pagination(1)
+loading()
 
 
 

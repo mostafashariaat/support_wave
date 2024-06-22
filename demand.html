@@ -10,7 +10,7 @@
   </head>
   <body class="overflow-x-hidden select-none">
     <header
-      class="bg-primery sticky top-0 z-10 w-full text-white h-[70px] flex flex-row-reverse justify-between items-center px-6 drop-shadow-md bg-[url('/public/images/pattern-0.5.png')] bg-blend-multiply bg-cover"
+      class="bg-primery sticky top-0 z-10 w-full text-white h-[70px] flex flex-row-reverse justify-between items-center px-6 drop-shadow-md bg-[url('/public/images/pattern-0.5.png')] bg-blend-multiply bg-cover invisible"
     >
       <ul class="flex items-center justify-center gap-4 h-full">
         <a href="/vote.html">
@@ -61,6 +61,10 @@
       />
       </a>
     </header>
+    <div class="loading absolute top-[50%] left-[50%] w-full text-center h-[100vh] flex justify-center items-center" style="height: 100vh;">
+      <img src="/public/images/jalili_loding.png" alt="logo" class="w-[200px] text-center">
+    </div>
+    <main class="main invisible"> 
     <div class="bg-[url('/public/images/pattern-0.5.png')] bg-blend-multiply bg-cover w-[100%] demand-container" > 
     <!-- supporters page (صفحه حامیان) -->
     <div
@@ -147,9 +151,9 @@
     </button>
   </div>
     </div>
-</div>
+  </main>
 <footer
-      class="flex w-full justify-between items-center py-3 px-6 bg-primery"
+      class="flex hidden w-full justify-between items-center py-3 px-6 bg-primery"
     >
       <p class="text-white text-lg md:text-2xl font-bold"
       >
