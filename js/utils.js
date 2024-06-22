@@ -78,9 +78,7 @@ function selectsItemsValue(element, data, ids = []) {
 
 async function  getDataFromServer(url,page_size=50) {
     const newUrl = url.includes("page_size") ? url : `${url}?page_size=${page_size}`
-    const ajax = await fetch(newUrl,{ headers: {
-      'Cache-Control': 'no-cache'
-    }})
+    const ajax = await fetch(newUrl)
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok ' + response.statusText);
