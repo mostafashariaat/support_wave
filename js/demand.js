@@ -12,6 +12,8 @@ demandButton.addEventListener("click",async()=>{
     const phone_number = toEnglishDigits(phoneNumberDOM.value);
     const gender = Array.from([...genderDOM].find(r => r.checked).value)[0];
     const demand = demnadMessageDOM.value;
+    const iranianPhonePattern = /^(?:\+98|0098|0)?9\d{9}$/;
+
 
 
     if(!full_name || !phone_number || !gender || !demand){
@@ -19,8 +21,20 @@ demandButton.addEventListener("click",async()=>{
         showToastify(toast);
         return 
     }
+    if(!iranianPhonePattern.test(phone_number)){
+        const toast = {text:"شماره تلفن وارد شده اشتباه است!",background: "red"}
+        showToastify(toast);
+        return 
+    }
     const data = {full_name,phone_number,gender,demand}
-    await postDataToServer(demandUrl,data,"مطالبه شما با موفقیت ثبت شد !")
+    await postDataToServer(demandUrl,data,"مطالبه شما با موفقیت ثبت شد !").then(r=>restartDemandForm())
    
 })
+
+
+function restartDemandForm(){
+    nameDOM.value = ""
+    phoneNumberDOM.value = ""
+    demnadMessageDOM.value = ""
+}
 
