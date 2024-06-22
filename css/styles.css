@@ -22,6 +22,13 @@ h1,h2,h3{
 }
 
 
+.loading{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
 
 .active_paginate {
     background-color: white !important;

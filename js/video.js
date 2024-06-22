@@ -1,6 +1,7 @@
-const video = document.querySelector(".video")
-video.src = await preloadVideo("https://example.com/video.mp4");
+import { loading } from "./loading.js";
 
+
+// loading()
 // startPreview()
 
 // function startPreview() {

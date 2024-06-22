@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/styles.css" />
     <link href="./dist/output.css" rel="stylesheet" />
   </head>
-  <body class="overflow-x-hidden select-none">
+  <body class="overflow-x-hidden">
     <header
       class="bg-primery sticky top-0 z-10 w-full text-white h-[70px] flex flex-row-reverse justify-between items-center px-6 drop-shadow-md bg-[url('/public/images/pattern-0.5.png')] bg-blend-multiply bg-cover invisible"
     >
@@ -60,8 +60,11 @@
       />
       </a>
     </header>
+    <div class="loading absolute top-[50%] left-[50%] w-full text-center flex justify-center items-center">
+      <img src="/public/images/jalili_loding.png" alt="logo" class="w-[200px] text-center">
+    </div>
     <!-- videos page (صفحه ویدئو‌ها ) -->
-    
+    <main class="main invisible"> 
     <div class="relative opacity bg-secondry w-full flex-col md:flex-row items-center justify-center sm:items-start sm:justify-start  pt-10 px-20 ">
       <div class="w-full sm:hidden flex justify-center">
         <img
@@ -87,29 +90,30 @@
       </div>
     
     </div>
-   
     <div class="grid w-full grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4  px-10 my-10 mt-14 md:mt-20">
-        <!-- <video src="public/videos/short.mp4" controls="controls" preload="metadata" class="mt-10 sm:mt-16 md:mt-20 lg:mt-[100px] rounded-lg video" ></video>
-        <video src="public/videos/test.mp4" class="top-10 rounded-lg" controls></video>
-        <video src="public/videos/test.mp4" class="mt-10 sm:mt-16 md:mt-20 lg:mt-[100px] rounded-lg" controls></video>
-        <video src="public/videos/test.mp4" class="top-10 rounded-lg" controls></video>
-        <video src="public/videos/test.mp4" class="mt-10 sm:mt-16 md:mt-20 lg:mt-[100px] rounded-lg" controls></video>
-        <video src="public/videos/test.mp4" class="top-10 rounded-lg" controls></video>
-        <video src="public/videos/test.mp4" class="mt-10 sm:mt-16 md:mt-20 lg:mt-[100px] rounded-lg" controls></video>
-        <video src="public/videos/test.mp4" class="top-10 rounded-lg" controls></video>
-        <video src="public/videos/test.mp4" class="mt-10 sm:mt-16 md:mt-20 lg:mt-[100px] rounded-lg" controls></video>
-        <video src="public/videos/test.mp4" class="top-10 rounded-lg" controls></video>
-        <video src="public/videos/test.mp4" class="mt-10 sm:mt-16 md:mt-20 lg:mt-[100px] rounded-lg" controls></video>
-        <video src="public/videos/test.mp4" class="top-10 rounded-lg" controls></video> -->
+      <!-- <video src="public/videos/short.mp4" controls="controls" preload="metadata" class="mt-10 sm:mt-16 md:mt-20 lg:mt-[100px] rounded-lg video" ></video>
+      <video src="public/videos/test.mp4" class="top-10 rounded-lg" controls></video>
+      <video src="public/videos/test.mp4" class="mt-10 sm:mt-16 md:mt-20 lg:mt-[100px] rounded-lg" controls></video>
+      <video src="public/videos/test.mp4" class="top-10 rounded-lg" controls></video>
+      <video src="public/videos/test.mp4" class="mt-10 sm:mt-16 md:mt-20 lg:mt-[100px] rounded-lg" controls></video>
+      <video src="public/videos/test.mp4" class="top-10 rounded-lg" controls></video>
+      <video src="public/videos/test.mp4" class="mt-10 sm:mt-16 md:mt-20 lg:mt-[100px] rounded-lg" controls></video>
+      <video src="public/videos/test.mp4" class="top-10 rounded-lg" controls></video>
+      <video src="public/videos/test.mp4" class="mt-10 sm:mt-16 md:mt-20 lg:mt-[100px] rounded-lg" controls></video>
+      <video src="public/videos/test.mp4" class="top-10 rounded-lg" controls></video>
+      <video src="public/videos/test.mp4" class="mt-10 sm:mt-16 md:mt-20 lg:mt-[100px] rounded-lg" controls></video>
+      <video src="public/videos/test.mp4" class="top-10 rounded-lg" controls></video> -->
 
-        <video id="player" playsinline controls preload="metadata" >
-          <source src="public/videos/test.mp4#t=1" type="video/mp4" />
+      <video id="player" playsinline controls preload="metadata" >
+        <source src="public/videos/test.mp4#t=1" type="video/mp4" />
 
-        </video>
-    </div>
+      </video>
+  </div>
+  </main>
+ 
 
     <footer
-      class="flex w-full justify-between items-center py-3 px-6 bg-primery"
+      class="flex hidden w-full justify-between items-center py-3 px-6 bg-primery"
     >
       <p class="text-white text-lg md:text-2xl font-bold"
       >
@@ -141,6 +145,6 @@
       </div>
     </footer>
 
-    <script type="module" src="videos.js"></script>
+    <script type="module" src="./js/video.js"></script>
   </body>
 </html>
