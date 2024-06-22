@@ -12,7 +12,7 @@ async function updateVoteNumber(element,count) {
 
 }
 
-const voteNumber = await getDataFromServer(voteUrl);
+const voteNumber = await getDataFromServer(voteUrl,10);
 
 
 
