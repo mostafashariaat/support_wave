@@ -3,22 +3,26 @@ import { getDataFromServer, paginateSize, postDataToServer, selectedId, supporte
 import { loading } from "./loading.js"
 import { checkLocalStorage, setLocalStorage } from "./store.js"
 
-
-const supportersCountDOM = document.querySelector(".supporters_count")
-const worksDOM = document.querySelector(".supports-filter")
-
-loading()
-
-const worksFilter = await getDataFromServer(worksUrl,20)
-const worksFilterResult = worksFilter.results;
-worksHTML(worksDOM,worksFilterResult) 
-
-
 const supportersListDOM = document.querySelector(".supporter-list")
 const paginationDOM = document.querySelector(".pagination-container")
 const supporters = await getDataFromServer(supportersUrl,20)
 const supportersResult = supporters.results;
 const supportersCount = await supporters?.count;
+const supportersCountDOM = document.querySelector(".supporters_count")
+supportersCountDOM.innerHTML = `${supportersCount.toLocaleString()} نفر`;
+
+
+loading()
+
+const worksDOM = document.querySelector(".supports-filter")
+
+
+// const worksFilter = await getDataFromServer(worksUrl,20)
+// const worksFilterResult = worksFilter.results;
+// worksHTML(worksDOM,worksFilterResult) 
+
+
+
 
 
 supporterHTML(supportersListDOM,supportersResult);
@@ -37,7 +41,7 @@ const nameDOM = document.querySelector("#name")
 const stateDOM = document.querySelector("#state")
 const workDOM = document.querySelector("#work")
 $(".state").select2()
-// // $(".work").select2()
+
 
 
 loading()
@@ -74,7 +78,7 @@ supportButton.addEventListener("click",async()=>{
     const supportersResult = supporters.results;
     supporterHTML(supportersList,supportersResult);
     const supportersCount = await supporters?.count;
-    supportersCountDOM.innerHTML = `${supportersCount} نفر`
+    supportersCountDOM.innerHTML = `${supportersCount.toLocaleString()} نفر`
 })
 
 
@@ -146,14 +150,14 @@ function paginationHTML(element,pages,active_page=1){
 }
 
 
-function worksHTML(element,data) {
-    element.innerHTML = data.map(item=>{
-        return `<div
-                class="flex cursor-pointer transition-all duration-300 w-full justify-center items-center text-center aspect-square bg-secondry align-item-center border-2 border-secondry rounded-3xl hover:bg-secondry-hover hover:border-secondry-hover p-2 text-white align-center  active_icon">
-                <p class="text-xl font-bold">${item.title}</p>
-                </div>
-`
-    }).join("")
+// function worksHTML(element,data) {
+//     element.innerHTML = data.map(item=>{
+//         return `<div
+//                 class="flex cursor-pointer transition-all duration-300 w-full justify-center items-center text-center aspect-square bg-secondry align-item-center border-2 border-secondry rounded-3xl hover:bg-secondry-hover hover:border-secondry-hover p-2 text-white align-center  active_icon">
+//                 <p class="text-xl font-bold">${item.title}</p>
+//                 </div>
+// `
+//     }).join("")
     
-}
+// }
 

@@ -90,7 +90,19 @@
       </div>
     
     </div>
-    <div class="grid w-full grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4  px-10 my-10 mt-14 md:mt-20">
+    <div class="grid w-full grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4  px-10 my-10 mt-14 md:mt-20 relative video-list" style="direction: rtl;">
+      <div class="relative top-10">
+        <video id="player" class="rounded-lg" playsinline preload="metadata" >
+          <source src="public/videos/test.mp4#t=1" type="video/mp4" />
+        </video>
+        <div class="flex items-center justify-center p-5 rounded absolute play-btn cursor-pointer" style="top: 50%; left: 50%; transform: translate(-50%,-50%); z-index: 9999;">
+          <img src="public/images/play.svg" alt="play" class="w-20">
+        </div>    
+        <div class="bg-secondry flex items-center justify-center p-2 rounded absolute share-btn cursor-pointer" style="bottom: 30px; right: 5px;  z-index: 9999;">
+          <img src="public/images/share.svg" alt="share" class="w-5">
+        </div>    
+      </div>
+
       <!-- <video src="public/videos/short.mp4" controls="controls" preload="metadata" class="mt-10 sm:mt-16 md:mt-20 lg:mt-[100px] rounded-lg video" ></video>
       <video src="public/videos/test.mp4" class="top-10 rounded-lg" controls></video>
       <video src="public/videos/test.mp4" class="mt-10 sm:mt-16 md:mt-20 lg:mt-[100px] rounded-lg" controls></video>
@@ -104,10 +116,6 @@
       <video src="public/videos/test.mp4" class="mt-10 sm:mt-16 md:mt-20 lg:mt-[100px] rounded-lg" controls></video>
       <video src="public/videos/test.mp4" class="top-10 rounded-lg" controls></video> -->
 
-      <video id="player" playsinline controls preload="metadata" >
-        <source src="public/videos/test.mp4#t=1" type="video/mp4" />
-
-      </video>
   </div>
   </main>
  
@@ -145,6 +153,6 @@
       </div>
     </footer>
 
-    <script type="module" src="./js/video.js"></script>
+    <script type="module" src="js/video.js"></script>
   </body>
 </html>

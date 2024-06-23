@@ -5,18 +5,7 @@ const supportersUrl = `${baseUrl}${supportUrl}/supports/`
 const statesUrl = `${baseUrl}${supportUrl}/provinces/`
 const worksUrl = `${baseUrl}${supportUrl}/expertise/`
 const demandUrl = `${baseUrl}${supportUrl}/demands/`
+const videoUrl = `${baseUrl}${supportUrl}/support-videos/`
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-export {baseUrl,voteUrl,supportersUrl,statesUrl,worksUrl,demandUrl}
+export {baseUrl,voteUrl,supportersUrl,statesUrl,worksUrl,demandUrl,videoUrl}
