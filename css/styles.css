@@ -111,3 +111,24 @@ h1,h2,h3{
     }
     
 }
+
+
+/* video page */
+
+.video-item{
+    display: flex;
+    background-color: black;
+    /* align-items: stretch; */
+    justify-content: center;
+    /* max-height: 200px; */
+    height: 500px;
+    width: 220px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+
+video{
+    object-fit: cover;
+  object-position: center;
+}
