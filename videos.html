@@ -65,21 +65,30 @@
     </div>
     <!-- videos page (صفحه ویدئو‌ها ) -->
     <main class="main invisible"> 
-    <div class="relative opacity bg-secondry w-full flex-col md:flex-row items-center justify-center sm:items-start sm:justify-start  pt-10 px-20 ">
+    <div class="relative opacity bg-secondry w-full flex-col md:flex-row items-center justify-center sm:items-start sm:justify-start  pt-2 sm:pt-10 px-2 sm:px-5 md:px-10">
       <div class="w-full sm:hidden flex justify-center">
         <img
         src="public/images/jalili_video.png"
         alt="jalili"
-        class="w-2/5"
+        class="w-[150px] sm:w-2/5"
       />
       </div>
       <div class="flex items-center justify-center sm:items-start sm:justify-start flex-col lg:gap-12 gap-4 sm:mt-20 md:mt-30 lg:mt-40">
-        <h1 class="max-w-[70%] text-white font-black text-xl sm:text-3xl md:text-4xl lg:text-6xl lg:max-w-[90%]">هر ایرانی یک نقش پرشکوه!</h1>
-        <p class="max-w-[85%] sm:max-w-[60%] text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold !leading-[150%] text-justify">
-          لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده
-          از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و
-          سطرآنچنان که لازم است
+        <h1 class="max-w-[90%] text-white font-black text-xl sm:text-3xl md:text-4xl lg:text-6xl lg:max-w-[90%]">هر ایرانی یک نقش پرشکوه!</h1>
+        <p class="max-w-[90%] sm:max-w-[60%] text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold !leading-[150%] text-justify">
+          ما از شما دعوت می‌کنیم تا فیلم‌های خود در حمایت از دکتر جلیلی را با ما به اشتراک بگذارید. ما مشتاقانه منتظر دیدن و شنیدن پیام‌های شما هستیم و از اینکه حمایت خود را نشان می‌دهید، سپاسگزاریم. با هم می‌توانیم تأثیرگذار باشیم و صدای حمایت شما را به گوش مردم ایران برسانیم.
         </p>
+        <a href="/upload_video.html">
+          <div
+          class="bg-primery p-2 text-[20px]  border-b-4 border-transparent cursor-pointer text-white rounded-lg transition-all duration-300 flex flex-row-reverse gap-2 md:gap-2 justify-center items-center h-full"
+        >
+        <div class="w-7 md:w-7"> 
+          <img src="/public/images/video-camera.svg"  alt="">
+        </div>
+          <span class= "inline">ارسال ویدئو</span>
+          
+        </div>
+      </a>
       </div>
       <div class="w-2/5 hidden sm:block absolute top-[50px] left-0">
         <img
@@ -90,7 +99,7 @@
       </div>
     
     </div>
-     <div class="grid w-full grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4  sm:px-10 my-10 mt-14 md:mt-20 relative video-list" style="direction: rtl;"> -->
+     <div class="grid w-full grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4  sm:px-10 my-10 mt-14 md:mt-20 relative video-list" style="direction: rtl;">
   <!-- <div class="relative top-10"> -->
         <!-- <video id="player" class="rounded-lg" playsinline preload="metadata" >
           <source src="public/videos/1.mp4#t=1" type="video/mp4" />

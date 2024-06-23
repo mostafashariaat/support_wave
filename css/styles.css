@@ -132,3 +132,12 @@ video{
     object-fit: cover;
   object-position: center;
 }
+
+
+
+@media (min-width: 1120px) {
+    .video-item {
+        width: 300px;
+    }
+    
+}
