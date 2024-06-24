@@ -99,12 +99,11 @@ async function  getDataFromServer(url,page_size=50) {
 
 
 
-async function postDataToServer(url, data={},message="",background="#f0f0f0") {
+async function postDataToServer(url, data={},header={'Content-Type': 'application/json'},message="",background="#f0f0f0") {
     const ajax = await fetch(url, {
         method: 'POST', // Specify the method
-        headers: {
-            'Content-Type': 'application/json' // Specify that we're sending JSON
-        },
+        headers: header,
+        // redirect: "follow",
         body: JSON.stringify(data) // Convert the data object to a JSON string
     })
     .then(response => {
