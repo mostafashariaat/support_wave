@@ -24,6 +24,10 @@ h1,h2,h3{
 }
 
 
+header,footer{
+    z-index: 100000000000000;
+}
+
 .loading{
     position: absolute;
     top: 50%;

@@ -31,6 +31,7 @@ playButtons.forEach(playButton=>{
         videoItem.pause()
         item.classList.remove("hidden")
         // item.removeAttribute("controls")
+        videoItem.controls = false;
 
       } 
     })
@@ -71,10 +72,10 @@ function videoPlayerHTML(element,data){
           // <source src="${item.video}" type="video/mp4" />
           <source src="${item.video}#t=0.5" type="video/mp4" />
         </video>
-        <div class="flex items-center justify-center p-5 rounded absolute play-btn cursor-pointer" style="top: 50%; left: 50%; transform: translate(-50%,-50%); z-index: 9999;" data-id=${item.id}>
+        <div class="flex items-center justify-center p-5 rounded absolute play-btn cursor-pointer" style="top: 50%; left: 50%; transform: translate(-50%,-50%); z-index: 3;" data-id=${item.id}>
           <img src="public/images/play.svg" alt="play" class="w-20" data-id=${item.id}>
         </div>    
-        <div class="bg-secondry flex items-center justify-center p-2 rounded absolute share-btn cursor-pointer" style="bottom: 30px; right: 5px;  z-index: 9999;" data-link=${item.video} data-link2="https://haamii.ir/${item?.video}" data-id=${item.id} data-caption="${item.caption}" data-title=${item.title}>
+        <div class="bg-secondry flex items-center justify-center p-2 rounded absolute share-btn cursor-pointer" style="bottom: 30px; right: 5px;  z-index: 4;" data-link=${item.video} data-link2="https://haamii.ir/${item?.video}" data-id=${item.id} data-caption="${item.caption}" data-title=${item.title}>
           <img src="public/images/share.svg" alt="share" class="w-5" data-id=${item.id} data-link=${item.video} data-link2="https://haamii.ir/${item?.video}" data-caption="${item.caption}" data-title=${item.title}>
         </div>    
       </div>`
