@@ -55,7 +55,7 @@ shareButtons.forEach(shareButton=>{
 function videoPlayerHTML(element,data){
     
     element.innerHTML = data.map((item,index)=>{
-        return `<div class="relative video-item rounded-lg ${index % 2 !==0 ? "mr-20 sm:mr-auto sm:mt-10" : "ml-20 sm:ml-auto"}">
+        return `<div class="relative video-item rounded-lg ${index % 2 !==0 ? "mr-20 sm:mr-0 sm:mt-10" : "ml-20 sm:ml-0"}">
         <video id="${item.id}" playsinline preload="metadata" data-id=${item.id}>
           // <source src="${item.video}" type="video/mp4" />
           <source src="${item.video}#t=0.5" type="video/mp4" />
