@@ -22,13 +22,24 @@ videoPlayerHTML(videoContainerDOM,data)
 const playButtons = document.querySelectorAll(".play-btn");
 playButtons.forEach(playButton=>{
   playButton.addEventListener("click",()=>{
-    const id = playButton.dataset.id;
-    console.log(id);
-    const video = document.getElementById(`${id}`)
+    const currentId = playButton.dataset.id;
+
+    playButtons.forEach(item=>{
+      const itemId = item.dataset.id;
+      if(itemId !== currentId){
+        const videoItem = document.getElementById(`${itemId}`)
+        videoItem.pause()
+        item.classList.remove("hidden")
+        // item.removeAttribute("controls")
+
+      } 
+    })
+    // console.log(id);
+    const video = document.getElementById(`${currentId}`)
     video.setAttribute("controls","controls")
     video.play()   
-    console.log(video);
-    playButton.style.display = "none"
+    // console.log(video);
+    playButton.classList.add("hidden")
   })
 })
 const shareButtons = document.querySelectorAll(".share-btn");
