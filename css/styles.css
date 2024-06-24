@@ -126,7 +126,7 @@ h1,h2,h3{
     height: 500px;
     width: 220px;
     overflow: hidden;
-    margin: 0 auto;
+    /* margin: 0 auto; */
 }
 
 
