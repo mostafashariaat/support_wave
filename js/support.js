@@ -73,7 +73,7 @@ supportButton.addEventListener("click",async()=>{
     }
     const data = {full_name:name,province:state,expertise:work}
     if(checkLocalStorage("support",1)){showToastify({text: "شما قبلا حمایت کرده‌اید! ", background: "red"});return; }
-    await postDataToServer(supportersUrl,data,"اطلاعات شما با موفقیت ثبت شد!").then(r=>setLocalStorage("support",1))
+    await postDataToServer(supportersUrl,data,{'Content-Type': 'application/json'},"اطلاعات شما با موفقیت ثبت شد!").then(r=>setLocalStorage("support",1))
     const supporters = await getDataFromServer(supportersUrl,10)
     const supportersResult = supporters.results;
     supporterHTML(supportersList,supportersResult);

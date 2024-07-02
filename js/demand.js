@@ -28,7 +28,7 @@ demandButton.addEventListener("click",async()=>{
         return 
     }
     const data = {full_name,phone_number,gender,demand}
-    await postDataToServer(demandUrl,data,"مطالبه شما با موفقیت ثبت شد !").then(r=>restartDemandForm())
+    await postDataToServer(demandUrl,data,{'Content-Type': 'application/json'},"مطالبه شما با موفقیت ثبت شد !").then(r=>restartDemandForm())
    
 })
 
